@@ -11,7 +11,7 @@ build-stamp: stage-stamp
 stage-stamp: configure-stamp
 
 configure-stamp: patch-stamp
-	(cd $(pq_module_name) && ./configure --prefix=$(part_dir)) && touch $@
+	(cd $(pq_module_name) && ./configure --prefix=$(part_dir) --with-curses) && touch $@
 
 patch-stamp: unpack-stamp
 	touch $@
